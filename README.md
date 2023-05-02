@@ -22,4 +22,3 @@ Aspectos abordados:
 
 ### Aula \#4 _soon…_
 - _soon…_
-'
