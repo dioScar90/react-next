@@ -4,6 +4,8 @@ Esse projeto trata-se do mini-curso intensivo de 4 aulas sobre React.js e Next.j
 
 Aspectos abordados:
 
+
+
 ### Aula \#1
 - ✅ [Next] Pasta `pages` gera as rotas.
 - ✅ [React] Primeiro componente.
