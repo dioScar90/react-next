@@ -16,9 +16,9 @@ Aspectos abordados:
     - ✅ [React] Comunicação entre componentes (direta).
     - ✅ [React] Comunicação entre componentes (indireta).
 
-- Aula \#3 _[soon...]_
+- Aula \#3 _soon…_
     - 🟠 [React] Renderização condicional.
     - 🟠 [React] Renderização de listas.
 
-- Aula \#4 _[soon...]_
-    - _[soon...]_
+- Aula \#4 _soon…_
+    - _soon…_
