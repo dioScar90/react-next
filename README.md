@@ -20,5 +20,5 @@ Aspectos abordados:
 - ✅ [React] Renderização condicional.
 - ✅ [React] Renderização de listas.
 
-### Aula \#4 _soon…_
+### Aula \#4
 - _soon…_
