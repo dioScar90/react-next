@@ -25,4 +25,5 @@ Aspectos abordados:
 - ✅ [React] Hooks personalizados.
 - ✅ [React] Chamar API `https://swapi.dev/`
 
+### Aula \#5
 - 🟠 [React] Hooks... useState, useEffect e useCallback.
