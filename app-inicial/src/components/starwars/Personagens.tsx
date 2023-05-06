@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function Personagens() {
+    const [processando, setProcessando] = useState<boolean>(false);
+
     async function simularChamadaAPI() {
         return new Promise(resolve => {
             setTimeout(() => {
@@ -8,14 +12,18 @@ export default function Personagens() {
     }
 
     async function obterPersonagens() {
-        console.log("Início da chamada...");
+        setProcessando(true);
         await simularChamadaAPI();
-        console.log("Fim da chamada.");
+        setProcessando(false);
     }
 
     return (
         <div>
-            <h1>Personagens</h1>
+            {processando ? (
+                <div>Processando...</div>
+            ) : (
+                <h1>Conteúdo com os personagens</h1>
+            )}
             <button onClick={obterPersonagens} className="bg-blue-500 p-2">
                 Obter
             </button>
