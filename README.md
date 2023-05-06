@@ -26,4 +26,4 @@ Aspectos abordados:
 - ✅ [React] Chamar API `https://swapi.dev/`
 
 ### Aula \#5
-- 🟠 [React] Hooks... useState, useEffect e useCallback.
+- 🟠 [React] Hooks… useState, useEffect e useCallback.
