@@ -21,4 +21,8 @@ Aspectos abordados:
 - ✅ [React] Renderização de listas.
 
 ### Aula \#4
-- _soon…_
+- ✅ [React] Componente de layout com grid.
+- ✅ [React] Hooks personalizados.
+- ✅ [React] Chamar API `https://swapi.dev/`
+
+- ✅ [React] Hooks... useState, useEffect e useCallback.
