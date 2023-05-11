@@ -39,7 +39,7 @@ export default function Contador() {
                 type="number"
                 value={delta}
                 onChange={e => setDelta(+e.target.value)}
-                className="bg-zinc-900 px-2"
+                className="bg-zinc-900 text-white px-2"
             />
         </div>
     )
