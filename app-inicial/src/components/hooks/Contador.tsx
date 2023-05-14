@@ -6,7 +6,7 @@ export default function Contador() {
     const [multi10, setMulti10] = useState(0);
 
     const calcularValorMulti10 = useCallback((valor: number) => {
-        return valor * 10
+        return valor * 10;
     }, []);
 
     useEffect(() => {
