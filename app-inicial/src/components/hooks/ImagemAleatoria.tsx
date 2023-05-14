@@ -13,10 +13,7 @@ export default function ImagemAleatoria() {
       className={`
             bg-blue-500 px-4 py-2 rounded-md
         `}
-      onClick={() => {
-        setPesquisa(valor);
-        console.log(valor);
-      }}
+      onClick={() => setPesquisa(valor)}
     >
       {valor}
     </button>
