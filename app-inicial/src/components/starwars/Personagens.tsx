@@ -5,7 +5,7 @@ interface PersonagensProps {
     selecionar: (personagem: any) => void
 }
 
-export default function Personagens(props: PersonagensProps) {
+export default function Personagens({ personagens, selecionar }: PersonagensProps) {
     
     return (
         <table className="w-3/5 text-xl opacity-70 rounded-lg overflow-hidden">
@@ -18,18 +18,18 @@ export default function Personagens(props: PersonagensProps) {
                 </tr>
             </thead>
             <tbody>
-                {props.personagens.map(p => (
+                {personagens.map(p => (
                     <tr
                         key={p.name}
                         className={`
-                            text-center even:bg-zinc-700 odd:bg-zinc-800
+                        text-center odd:bg-zinc-700 even:bg-zinc-800
                         `}
                     >
                         <td className="p-2">{p.name}</td>
                         <td className="p-2">{p.height}</td>
                         <td className="p-2">{p.mass}</td>
                         <td className="p-2">
-                            <button className="botao" onClick={() => props.selecionar(p)}>
+                            <button className="botao" onClick={() => selecionar(p)}>
                                 <IconCheck size={20} />
                             </button>
                         </td>

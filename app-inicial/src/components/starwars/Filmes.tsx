@@ -5,7 +5,7 @@ interface FilmesProps {
     voltar: () => void
 }
 
-export default function Filmes(props: FilmesProps) {
+export default function Filmes({ filmes, voltar }: FilmesProps) {
     
     return (
         <div className="flex flex-col gap-5 items-center w-full">
@@ -18,18 +18,18 @@ export default function Filmes(props: FilmesProps) {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.filmes.map(f => {
-                        const releaseDate = new Date(f.release_date).toLocaleDateString("pt-BR");
+                    {filmes.map(({ title, episode_id, release_date }) => {
+                        const releaseDate = new Date(release_date).toLocaleDateString("pt-BR");
 
                         return (
                             <tr
-                                key={f.title}
+                                key={title}
                                 className={`
-                                    text-center even:bg-zinc-700 odd:bg-zinc-800
+                                    text-center odd:bg-zinc-700 even:bg-zinc-800
                                 `}
                             >
-                                <td className="p-2">{f.title}</td>
-                                <td className="p-2">{f.episode_id}</td>
+                                <td className="p-2">{title}</td>
+                                <td className="p-2">{episode_id}</td>
                                 <td className="p-2">{releaseDate}</td>
                             </tr>
                         )
@@ -37,7 +37,7 @@ export default function Filmes(props: FilmesProps) {
                 </tbody>
             </table>
 
-            <button className="botao" onClick={props.voltar}>Voltar</button>
+            <button className="botao" onClick={voltar}>Voltar</button>
         </div>
     )
 }
