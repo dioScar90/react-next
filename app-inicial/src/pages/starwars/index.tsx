@@ -1,9 +1,11 @@
 import Personagens from "@/components/starwars/Personagens";
+import Filmes from "@/components/starwars/Filmes";
 import useStarWars from "@/data/hooks/useStarWars";
 import Background from "@/components/starwars/Background";
 
 export default function PaginaStarWars() {
-    const { processando, personagens, selecionarPersonagem } = useStarWars();
+    const { processando, personagens, filmes, selecionarPersonagem, voltar }
+        = useStarWars();
     
     return (
         <div className="flex flex-col gap-5 justify-center items-center h-screen relative">
@@ -11,11 +13,13 @@ export default function PaginaStarWars() {
             
             {processando ? (
                 <div>Processando...</div>
-            ) : (personagens.length > 0 ? (
+            ) : filmes.length > 0 ? (
+                <Filmes filmes={filmes} voltar={voltar} />
+            ) : personagens.length > 0 ? (
                 <Personagens personagens={personagens} selecionar={selecionarPersonagem} />
             ) : (
-                <div>Nenhum personagem buscado</div>
-            ))}
+                <div>Dados não encontrados</div>
+            )}
 
         </div>
     )

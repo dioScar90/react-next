@@ -12,7 +12,6 @@ export default function useStarWars() {
             return;
         
         try {
-            console.log("obterFilmes...");
             iniciarProcessamento();
 
             const reqs = personagem.films.map(async (film: string) => {
@@ -22,8 +21,6 @@ export default function useStarWars() {
     
             const filmes = await Promise.all(reqs);
             setFilmes(filmes);
-    
-            console.log(filmes);
         }
         finally {
             finalizarProcessamento();
@@ -45,9 +42,11 @@ export default function useStarWars() {
         }
     }, [iniciarProcessamento, finalizarProcessamento])
 
-    const selecionarPersonagem = (personagem: any) => {
-        setPersonagem(personagem);
-        console.log("Selecionado: " + personagem.name);
+    const selecionarPersonagem = (personagem: any) => setPersonagem(personagem);
+    
+    const voltar = () => {
+        setPersonagem(null);
+        setFilmes([]);
     }
 
     useEffect(() => {
@@ -60,7 +59,9 @@ export default function useStarWars() {
 
     return {
         personagens,
+        filmes,
         processando,
-        selecionarPersonagem
+        selecionarPersonagem,
+        voltar
     }
 }
